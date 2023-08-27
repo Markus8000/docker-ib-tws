@@ -33,10 +33,15 @@ First, authorize X socket connectivity:
 xhost +local:root
 ```
 
-Then, launch the container:
+Then, launch the container (Unix):
 
 ```shell
 sudo docker run --name=ib-tws --detach=true -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --device /dev/dri --device /dev/snd --device /dev/vga_arbiter ib-tws
+```
+
+Windows (i.a. with VcXsrv)
+```shell
+docker run --name=ib-tws --detach=true -e DISPLAY=$DISPLAY -v C:/Users/xx/.Xauthority:/home/ib-tws/.Xauthority ib-tws
 ```
 
 After the initial invocation, you can re-start the container as following:
