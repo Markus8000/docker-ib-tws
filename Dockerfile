@@ -7,7 +7,6 @@ ARG arch=x64
 # configure a dedicated user
 ARG RUN_USER=ib-tws
 ARG RUN_USER_UID=1012
-ARG RUN_USER_GID=1012
 
 # Accept license for Microsoft fonts
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
@@ -83,4 +82,4 @@ EXPOSE 7496
 EXPOSE 7497
 
 # Start TWS
-CMD ["Jts/tws"]
+CMD ["./tws/tws"]
