@@ -1,7 +1,7 @@
 FROM ubuntu:xenial 
 
 # version can be stable, latest, or beta; arch can be x64 or x86
-ARG version=latest
+ARG version=latest-standalone
 ARG arch=x64
 
 # configure a dedicated user
